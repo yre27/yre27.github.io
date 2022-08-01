@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+</head>
+<body>
+    <div >
+        <p>Digite sua idade</p>
+        <input type="number" name="" id="age1">
+        <input type="button" value="Confimar" onclick="confirm ()">
+    </div>
+    <p id="res">  </p>
+   <script>
+function confirm(){
+var a1=document.getElementById ('age1')
+res=document.getElementById('res')
+a1=Number (a1.value)
+if (a1<14){
+    res.innerHTML += `Você tem ${a1} anos e não pode votar`
+    
+}
+else if(a1>=18) {
+    res.innerHTML += `Você tem ${a1} e seu voto é obrigatório `
+}
+else if (a1>14){
+    res.innerHTML += `Você tem ${a1} e seu voto é opcional`
+}
+}
+
+
+
+   </script> 
+</body>
+</html>
